@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Smart Stadium Simulation
 
 A real-time simulation system designed to improve the attendee experience in large-scale sporting venues. The system helps people avoid crowded areas, reduce waiting time, and make better decisions in real time by recommending the least crowded gates and fastest service points.
@@ -38,3 +39,7 @@ The system operates on a continuous real-time loop:
 2. **Backend updates state**: The in-memory state is updated instantly.
 3. **Frontend fetches updates**: The UI polls the `/api/recommend` endpoint.
 4. **UI updates automatically**: The best gate and food stall are dynamically displayed to the user.
+=======
+# Exit-Smart
+A full-stack simulation platform that analyzes crowd density and queue lengths to provide real-time recommendations for optimal navigation in large-scale venues.
+>>>>>>> ff204d50d5e26b90d8099fccd0a0bf01dd256b3b
