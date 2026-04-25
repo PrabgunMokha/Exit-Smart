@@ -1,45 +1,40 @@
-<<<<<<< HEAD
-# Smart Stadium Simulation
+# Exit-Smart: Stadium Crowd Management Simulation
 
-A real-time simulation system designed to improve the attendee experience in large-scale sporting venues. The system helps people avoid crowded areas, reduce waiting time, and make better decisions in real time by recommending the least crowded gates and fastest service points.
+Exit-Smart is a full-stack simulation platform that analyzes crowd density and queue lengths to provide real-time recommendations for optimal navigation in large-scale venues. The system helps attendees avoid crowded areas, reduces waiting times, and facilitates data-driven decision-making in real time by identifying the least congested gates and the most efficient service points.
 
-## 🎯 Core Features
+## Core Features
 
-1. **Simulates Venue Conditions**: Real-time mock data for crowd levels at stadium gates and queue lengths at food stalls.
-2. **Decision Engine**: Calculates wait times (queue × service time) and identifies the optimal routes and service points.
-3. **Real-time Recommendations**: A frontend dashboard that automatically updates every 3 seconds, displaying the best gate and fastest stall.
-4. **Admin Control**: A backend simulation control panel that allows instant adjustments to crowd counts and queue lengths to see how the system reacts.
+1. **Venue Condition Simulation**: Generates real-time mock data reflecting crowd levels at stadium gates and queue lengths at food stalls.
+2. **Decision Engine**: Calculates anticipated wait times based on queue length and average service time, identifying optimal routes and service points.
+3. **Real-Time Recommendations**: Features a user-facing dashboard that automatically refreshes, continuously displaying the most efficient gate and service stall.
+4. **Administrative Control Panel**: Provides a backend simulation interface for administrators to instantly adjust crowd counts and queue parameters, enabling the observation of system responses under varying conditions.
 
-## 🛠️ Technology Stack
+## Technology Stack
 
-- **Frontend**: Next.js 15 (App Router), React, Vanilla CSS with a premium dark-mode glassmorphism design.
-- **Backend**: Next.js Serverless API routes (State management and processing).
-- **Deployment Strategy**: Dockerized container ready for Google Cloud Run (zero server management, automatic scaling).
+- **Frontend**: Next.js 15 (App Router), React, and custom CSS featuring a modern, responsive design.
+- **Backend**: Next.js Serverless API routes handling state management and data processing.
+- **Deployment Strategy**: Dockerized container architecture, optimized for deployment on Google Cloud Run to ensure zero server management and automatic scalability.
 
-## 🚀 Getting Started Locally
+## Getting Started Locally
 
-1. Install dependencies:
+1. Install the required dependencies:
    ```bash
    npm install
    ```
 
-2. Run the development server:
+2. Start the development server:
    ```bash
    npm run dev
    ```
 
-3. Open your browser:
+3. Access the application in your browser:
    - **User Dashboard**: [http://localhost:3000](http://localhost:3000)
-   - **Admin Control**: [http://localhost:3000/admin](http://localhost:3000/admin)
+   - **Admin Control Panel**: [http://localhost:3000/admin](http://localhost:3000/admin)
 
-## 💡 How it Works
+## System Architecture
 
-The system operates on a continuous real-time loop:
-1. **Admin/Simulation changes data**: Update queues or crowd counts via the admin panel.
-2. **Backend updates state**: The in-memory state is updated instantly.
-3. **Frontend fetches updates**: The UI polls the `/api/recommend` endpoint.
-4. **UI updates automatically**: The best gate and food stall are dynamically displayed to the user.
-=======
-# Exit-Smart
-A full-stack simulation platform that analyzes crowd density and queue lengths to provide real-time recommendations for optimal navigation in large-scale venues.
->>>>>>> ff204d50d5e26b90d8099fccd0a0bf01dd256b3b
+The application operates on a continuous real-time data loop:
+1. **Data Modification**: Administrators update queue lengths or crowd densities via the admin panel.
+2. **State Management**: The backend instantaneously updates the in-memory state.
+3. **Data Fetching**: The frontend interface polls the `/api/recommend` endpoint at regular intervals.
+4. **Dynamic UI Updates**: The user dashboard automatically displays the optimal gate and food stall based on the latest calculated metrics.
